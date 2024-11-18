@@ -3,56 +3,55 @@ use game_stat;
 
 --Création de la table
 CREATE TABLE IF NOT EXISTS game_stat.Statistiques_Joueur(
-id_data_stat uuid,
 player_id text,
-atk int,
-def int,
-xp int,
-victoire int,
+atk INT,
+def INT,
+xp INT,
+victoire INT,
 timestamp_stat timestamp,
-PRIMARY KEY (player_id,id_data_stat)
+PRIMARY KEY (player_id,timestamp_stat)
 );
 
 --Insertion de données (CREER)
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, xp, timestamp_stat) VALUES (now(), '1', 300, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, def, timestamp_stat) VALUES (now(),'1', 4000, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, xp, timestamp_stat) VALUES (now(),'1', 300, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, atk, timestamp_stat) VALUES (now(),'1', 1000, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, atk, timestamp_stat) VALUES (now(),'1', 2000, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, def, timestamp_stat) VALUES (now(),'1', 100, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, victoire, timestamp_stat) VALUES (now(),'1', 1, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, victoire, timestamp_stat) VALUES (now(),'1', 1, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, victoire, timestamp_stat) VALUES (now(),'1', 1, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, victoire, timestamp_stat) VALUES (now(),'1', 1, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, xp, timestamp_stat) VALUES ('1', 300, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, def, timestamp_stat) VALUES ('1', 4000, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, xp, timestamp_stat) VALUES ('1', 300, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, atk, timestamp_stat) VALUES ('1', 1000, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, atk, timestamp_stat) VALUES ('1', 2000, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, def, timestamp_stat) VALUES ('1', 100, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, victoire, timestamp_stat) VALUES ('1', 1, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, victoire, timestamp_stat) VALUES ('1', 1, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, victoire, timestamp_stat) VALUES ('1', 1, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, victoire, timestamp_stat) VALUES ('1', 1, toTimeStamp(now()));
 
 
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, xp, timestamp_stat) VALUES (now(),'2', 100, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, def, timestamp_stat) VALUES (now(),'2', 300, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, xp, timestamp_stat) VALUES (now(),'2', 100, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, atk, timestamp_stat) VALUES (now(),'2', 5000, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, atk, timestamp_stat) VALUES (now(),'2', 4000, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, def, timestamp_stat) VALUES (now(),'2', 50, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, victoire, timestamp_stat) VALUES (now(),'2', 1, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, victoire, timestamp_stat) VALUES (now(),'2', 1, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, victoire, timestamp_stat) VALUES (now(),'2', 1, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, xp, timestamp_stat) VALUES ('2', 100, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, def, timestamp_stat) VALUES ('2', 300, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, xp, timestamp_stat) VALUES ('2', 100, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, atk, timestamp_stat) VALUES ('2', 5000, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, atk, timestamp_stat) VALUES ('2', 4000, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, def, timestamp_stat) VALUES ('2', 50, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, victoire, timestamp_stat) VALUES ('2', 1, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, victoire, timestamp_stat) VALUES ('2', 1, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, victoire, timestamp_stat) VALUES ('2', 1, toTimeStamp(now()));
 
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, xp, timestamp_stat) VALUES (now(),'3', 100, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, def, timestamp_stat) VALUES (now(),'3', 6000, totimestamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, xp, timestamp_stat) VALUES (now(),'3', 50,toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, atk, timestamp_stat) VALUES (now(),'3', 300, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, atk, timestamp_stat) VALUES (now(),'3', 10, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, def, timestamp_stat) VALUES (now(),'3', 1000, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, victoire, timestamp_stat) VALUES (now(),'3', 1, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, victoire, timestamp_stat) VALUES (now(),'3', 1, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, xp, timestamp_stat) VALUES ('3', 100, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, def, timestamp_stat) VALUES ('3', 6000, totimestamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, xp, timestamp_stat) VALUES ('3', 50,toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, atk, timestamp_stat) VALUES ('3', 300, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, atk, timestamp_stat) VALUES ('3', 10, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, def, timestamp_stat) VALUES ('3', 1000, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, victoire, timestamp_stat) VALUES ('3', 1, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, victoire, timestamp_stat) VALUES ('3', 1, toTimeStamp(now()));
 
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, xp, timestamp_stat) VALUES (now(),'4', 100, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, def, timestamp_stat) VALUES (now(),'4', 6000, totimestamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, xp, timestamp_stat) VALUES (now(),'4', 50,toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, atk, timestamp_stat) VALUES (now(),'4', 300, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, atk, timestamp_stat) VALUES (now(),'4', 10, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, def, timestamp_stat) VALUES (now(),'4', 1000, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, victoire, timestamp_stat) VALUES (now(),'4', 1, toTimeStamp(now()));
-INSERT INTO game_stat.Statistiques_Joueur(id_data_stat, player_id, victoire, timestamp_stat) VALUES (now(),'4', 1, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, xp, timestamp_stat) VALUES ('4', 100, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, def, timestamp_stat) VALUES ('4', 6000, totimestamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, xp, timestamp_stat) VALUES ('4', 50,toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, atk, timestamp_stat) VALUES ('4', 300, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, atk, timestamp_stat) VALUES ('4', 10, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, def, timestamp_stat) VALUES ('4', 1000, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, victoire, timestamp_stat) VALUES ('4', 1, toTimeStamp(now()));
+INSERT INTO game_stat.Statistiques_Joueur( player_id, victoire, timestamp_stat) VALUES ('4', 1, toTimeStamp(now()));
 
 
 --Selection de données (READ)
@@ -64,14 +63,18 @@ SELECT SUM(def) as degats_recus, player_id
 FROM game_stat.Statistiques_Joueur
 GROUP BY player_id;
 
-SELECT SUM(xp) as experiences, player_id
+SELECT SUM(xp) as experiences_gagnees, player_id
+FROM game_stat.Statistiques_Joueur
+GROUP BY player_id;
+
+SELECT SUM(victoire) as victoires_remportees, player_id
 FROM game_stat.Statistiques_Joueur
 GROUP BY player_id;
 
 --Mise à jour des données (UPDATE)
 UPDATE game_stat.Statistiques_Joueur
-SET xp = xp + 1000
-WHERE player_id = '3' AND id_data_stat = 'id_data_stat'; --id_data_stat à modifier selon la donnée
+SET xp = 3000
+WHERE player_id = '1' AND timestamp_stat >= '2024-12-20 00:00:00' AND timestamp_stat < '2024-12-21 00:00:00';
 
 --Suppression de données (DELETE)
 DELETE FROM game_stat.Statistiques_Joueur
